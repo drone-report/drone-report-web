@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    
+</head>
+
+<body>
+    
+    <span id="text0">Text</span>
+    <br>
+    <span id="text1">Text</span>
+    <br>
+    <span id="text2">Text</span>
+    <br>
+    <span id="text3">Text</span>
+    <br>
+    <button onclick="copyValues()">Click me to record location and direction</button>
+    <br>
+    <a href="mapview.html">View map</a>
+    
+    <script type="module">
+        import {
+          Gyroscope,
+          AbsoluteOrientationSensor
+        } from './src/motion-sensors.js';
+    </script>
+
+    <script src="main.js"></script>
+    
+</body>
