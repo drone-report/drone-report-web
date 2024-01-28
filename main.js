@@ -52,7 +52,7 @@ function geolocationErrorHandler(error){
 
 }
 
-function copyValues(){
+async function copyValues(){
     let lat = document.getElementById("text1").innerText;
     let lng = document.getElementById("text2").innerText;
     let dir = document.getElementById("text3").innerText*180;
@@ -60,13 +60,14 @@ function copyValues(){
         alert("Failed to get location")
         return;
     }
-    if (dir=="Text"){
+    if (dir==NaN){
         alert("Failed to get direction")
     }
     window.focus()
-    window.navigator.clipboard.writeText("{\"lat\":"+lat+", \"lng\":"+lng+", \"dir\":"+dir+"}").then(function(){
-        alert("Values copied to clipboard")
-    });
+    await window.navigator.clipboard.writeText("{\"lat\":"+lat+", \"lng\":"+lng+", \"dir\":"+dir+"}");
+
+    alert("Values copied to clipboard")
+
 }
 
 let sensor;
