@@ -63,8 +63,10 @@ function copyValues(){
     if (dir=="Text"){
         alert("Failed to get direction")
     }
-    window.navigator.clipboard.writeText("{\"lat\":"+lat+", \"lng\":"+lng+", \"dir\":"+dir+"}")
-    alert("Values copied to clipboard")
+    window.focus()
+    window.navigator.clipboard.writeText("{\"lat\":"+lat+", \"lng\":"+lng+", \"dir\":"+dir+"}").then(function(){
+        alert("Values copied to clipboard")
+    });
 }
 
 let sensor;
