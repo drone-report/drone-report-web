@@ -63,7 +63,7 @@ function copyValues(){
     if (dir=="Text"){
         alert("Failed to get direction")
     }
-    navigator.clipboard.writeText("{\"lat\":"+lat+", \"lng\":"+lng+", \"dir\":"+dir+"}")
+    window.navigator.clipboard.writeText("{\"lat\":"+lat+", \"lng\":"+lng+", \"dir\":"+dir+"}")
     alert("Values copied to clipboard")
 }
 
