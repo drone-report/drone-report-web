@@ -55,7 +55,7 @@ function geolocationErrorHandler(error){
 async function copyValues(){
     let lat = document.getElementById("text1").innerText;
     let lng = document.getElementById("text2").innerText;
-    let dir = document.getElementById("text3").innerText*180;
+    let dir = document.getElementById("text3").innerText*-180;
     if (lng==""){
         alert("Failed to get location")
         return;
